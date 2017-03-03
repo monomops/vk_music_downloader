@@ -123,7 +123,9 @@ def main():
             if not os.path.exists(file_dir):
                 os.makedirs(file_dir)
             # Download song
-            urlretrieve(file_url, "%s/%s.mp3" % (file_dir, file_name))
+            file_path = "%s/%s.mp3" % (file_dir, file_name)
+            if not os.path.exists(file_path):
+                urlretrieve(file_url, file_path)
 
     driver.close()
     if platform.system() != "Windows":
