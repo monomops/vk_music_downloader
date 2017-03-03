@@ -1,0 +1,11 @@
+VK_LOGIN_URL = "https://vk.com/login"
+
+VK_LOGIN = "+71111232233"
+VK_PASS = "somepass"
+
+DEFAULT_DELAY = 10
+MUSIC_PATH = "music"
+
+# Download music from accounts
+# vk.com/NICKNAME
+VK_FRIENDS = ["NICKNAME","NICKNAME2"]

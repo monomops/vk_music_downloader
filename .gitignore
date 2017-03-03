@@ -1,0 +1,6 @@
+env
+config.py
+cookies.pkl
+__pycache__
+music
+debug.log
