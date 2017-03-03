@@ -21,6 +21,7 @@ logger.addHandler(console_handler)
 logger.setLevel(logging.INFO)
 
 
+
 def vk_login(driver):
     try:
         cookies = pickle.load(open("cookies.pkl", "rb"))
@@ -57,12 +58,12 @@ def main():
         logger.error("Bad music folder") & sys.exit()
 
     if platform.system() == "Windows":
-        driver = webdriver.Chrome('chromedriver/chromedriver.exe')
+        driver = webdriver.Chrome(os.path.join(BASE_DIR, 'chromedriver/chromedriver.exe'))
     else:
         from pyvirtualdisplay import Display
         display = Display(visible=0, size=(800, 600))
         display.start()
-        driver = webdriver.Chrome('chromedriver/chromedriver')
+        driver = webdriver.Chrome(os.path.join(BASE_DIR, 'chromedriver/chromedriver'))
     driver.get("https://vk.com/login")
     vk_login(driver)
 
